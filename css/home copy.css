@@ -1,0 +1,930 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    width: 100%; /* Makes the body element take up the full width of its container */
+    max-width: none; /* Limits the maximum width of the body element to 1200 pixels */
+    margin: 0 auto; /* Centers the body horizontally within its container */
+    padding: 0px; /* Adds padding inside the body element */
+    box-sizing: border-box; 
+    background-color: #201c34;
+    
+}
+
+.header {
+    background-color: #201c34;
+    padding: 20px 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navbar background and padding */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #201c34; /* Light gray background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.auth-buttons a.signup-btn {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #201c34;
+    margin-top: 0px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 11px;
+    
+}
+
+.search-bar {
+    margin-top: 10px;
+    border-radius: 20px; /* Button border radius */
+
+}
+
+.search-button{
+    margin-top: 5px;
+    border-radius: 20px; /* Button border radius */
+
+}
+
+.search-input{
+    border-radius: 20px; 
+    font-weight: 300; font-size: 18px; width: 25%;text-align: center;
+
+}
+
+
+
+input[type="text"],
+select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.featured-listings {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.category {
+    position: relative; /* Ensure positioning context for absolute positioning */
+    width: 30%; /* Adjust based on desired layout */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.category img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    border-radius: 30px; /* Optional: Add rounded corners to images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
+}
+
+.category-label {
+    position: absolute;
+    bottom: 10px; /* Adjust positioning from bottom */
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(65, 64, 64, 0.8); /* Semi-transparent background */
+    font-weight: 200;
+    color: #fff;
+}
+
+
+/* Filters */
+.filters {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.filters select,
+.filters input[type="text"] {
+    width: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .listing-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .listing-card {
+        width: 100%;
+    }
+
+    .filters select,
+    .filters input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filters button {
+        width: 100%;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Header Menu styling */
+.header-menu {
+    display: flex;
+    justify-content: flex-start; /* Align menu items to the left */
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    color: #fff;
+}
+.footer-menu {
+    display: flex;
+    gap: 10px; /* Adjust the spacing as needed */
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    
+}
+.footer-menu li {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+    width: 200px;
+}
+
+/* Style for the divider line */
+.navbar-divider {
+    border: 3px solid #d90505; /* Customize the color and thickness */
+    margin-bottom: 20px; /* Adjust spacing after the navbar */
+    
+    width: 97%;
+}
+
+.post-scam-button {
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align menu items to the left */
+    align-items: center;
+    margin-right: 10px;
+}
+
+.post-scam-btn {
+    padding: 10px 20px;
+    background-color: #086cfc; /* Button background color */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px; /* Button border radius */
+    margin-bottom: 40px;
+}
+
+.post-scam-btn:hover {
+    background-color: #fff; /* Hover state background color */
+    color: #086cfc;
+}
+
+.header-menu li {
+    margin-left: 20px;
+}
+
+.header-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-menu li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Search bar styling */
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+} 
+.user-list {
+    display: none; /* Initially hide the user list */
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: circle;
+}
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#loginModal{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 40%;
+
+    /* Center the modal using flexbox */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px;
+    margin-top: 20px;
+    
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#signupModal {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 80%;
+
+       /* Center the modal using flexbox */
+       display: none;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin-left: 350px;
+       margin-top: 0px;
+
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #201c34;
+    padding: 20px;
+    text-align: left;
+    width: 1200px;
+    max-width: none;
+    margin-left: 10px;
+}
+
+.footer-content {
+    max-width: none;
+    width: 1200px;
+    
+
+}
+.category-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-name {
+    font-weight: 200;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.subcategory-list {
+    font-size: 13px;
+    list-style: none;
+    padding: 0;
+    line-height: 15px;
+    margin-top: 10px;
+    font-weight: normal;
+    
+}
+
+.subcategory-list li {
+    margin-bottom: 8px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.column {
+    flex-basis: calc(16.6667% - 20px); /* Each category occupies 50% width with spacing */
+    margin-bottom: 20px;
+    padding: 3px;
+    width: 1200px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    max-width: none;
+}
+
+.footer-content {
+    max-width: none;
+}
+
+/* Style the tab buttons */
+.tab button {
+    background-color: #201c34;
+    float: left;
+    border: 1px solid #d90505; /* Initially transparent border */
+    border-radius: 0px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #d90505;
+    color: #fff;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #d90505;
+    border-color: #d90505; /* Red colored border for active tab */
+    color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+/* Show the active tab */
+.tabcontent.show {
+    display: block;
+}
+#allUsersTable table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #d90505; /* Red border */
+}
+
+#allUsersTable th{
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #d90505; /* Red border for table cells */
+    color: white; /* White font color */
+}
+
+#allUsersTable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #d90505; /* Red border for table cells */
+    color: white; /* White font color */
+    font-size: 14px;
+}
+
+#postsTable table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #d90505; /* Red border */
+}
+
+#postsTable th{
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #d90505; /* Red border for table cells */
+    color: white; /* White font color */
+}
+
+#postsTable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #d90505; /* Red border for table cells */
+    color: white; /* White font color */
+    font-size: 14px;
+}
+
+#contentTable table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #d90505; /* Red border */
+}
+
+#contentTable th{
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #d90505; /* Red border for table cells */
+    color: white; /* White font color */
+}
+
+
+#contentTable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #d90505; /* Red border for table cells */
+    color: white; /* White font color */
+    font-size: 14px;
+}
+#contentTable button {
+    background-color: transparent;
+
+}
+
+#aboutmeTable table{
+    width: 100%;
+    border-collapse: collapse; /* Red border */
+    justify-content: center; 
+}
+
+#aboutmeTable td {
+    padding: 8px;
+    text-align: center;
+    color: white; /* White font color */
+    font-weight: 100;
+    font-size: 18px;
+}
+#aboutmeTable th{
+    padding: 8px;
+    text-align: center;
+    color: white; /* White font color */
+    font-weight: 100;
+    font-size: 18px;
+    text-transform: uppercase; 
+}
+
+#aboutmeTable button{
+    background-color: #201c34;
+    
+}
+
+
+#postsTable th,
+#postsTable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #d90505; /* Red border for table cells */
+    color: white; /* White font color */
+}
+
+#mypostsTable .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post {
+    width: 60%; /* Adjust width as needed */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex; /* Use flexbox to align image and details vertically */
+    flex-direction: column; /* Stack image and details vertically */
+}
+
+.post img {
+    width: 300px;
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    border-radius: 30px; /* Optional: Add rounded corners to images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
+}
+
+.post-details {
+    padding: 15px;
+    color: white;
+    
+    margin-right: 60px;
+    width: 100%;
+
+}
+
+.post-details h3 {
+    margin-top: 0;
+    font-size: 20px;
+    
+}
+
+.post-details p {
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 100;
+    
+}
+
+.role-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 200;
+    color: #fff;
+    margin-left: 7px;
+    font-size: 12px;
+
+}
+
+.admin {
+    background-color: #007bff; /* Blue for admin role */
+}
+
+.disabled {
+    background-color: #dc3545; /* Red for disabled role */
+}
+
+.merged {
+    background-color: #ffc107; /* Yellow for merged role */
+}
+
+/* Styles for settings button */
+.settings-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #999;
+}
+
+/* Styles for settings menu */
+.settings-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Styles for settings menu items */
+.settings-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Styles for settings button */
+.settings-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #999;
+}
+
+/* Hover effect for settings button */
+.settings-btn:hover {
+    color: #555; /* Change text color on hover */
+}
+
+/* Styles for dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 15%;
+}
+
+/* Hover effect for dropdown content */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown content on hover */
+}
+
+.dropdown-content button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: #201c34;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Hover effect for dropdown menu items */
+.dropdown-content button:hover {
+    background-color: #201c34; /* Change background color on hover */
+    color: white;
+    border-radius: 0px;
+}
+
+.content-edit {
+    padding: 20px;
+    background-color: #201c34;
+}
+
+#contentForm {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#contentForm label {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+textarea, input[type="checkbox"] {
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+button[type="submit"] {
+    background-color: #ff5f5f;
+    width: 30%;
+    margin-right: 5px;
+}
+
+button[type="button"] {
+    background-color: transparent;
+    border-radius: 0px;
+    border-color: white;
+    border: 1px solid;
+}
+
+.status-options {
+    display: flex;          /* Use flexbox layout */
+    align-items: left;    /* Align items vertically in the center */
+    /* Distribute space evenly between items */
+    justify-content: space-evenly; /* or space-around, or space-evenly */
+}
+
+.status-options input[type="checkbox"] {
+    margin-right: 5px;      /* Adds spacing between checkboxes and labels */
+}
+
+ /* Optional: Adjust label styles for better alignment */
+ .status-options label {
+    margin-right: 0px;/* Adjust spacing between labels */
+}
+
+
+#signup-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.popup-content {
+    background-color: #201c34;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+    margin-left: 200px;
+    margin-top: 60px;
+}
+
+/* Style for the sign-in form */
+#signin-form {
+    width: 25vw; /* Set maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 0px;
+    background-color: transparent;
+    border-right: 1px solid red;
+
+}
+
+/* Style for form labels */
+#signin-form label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 10px; /* Add spacing below each label */
+    color: white;
+}
+
+/* Style for form inputs */
+#signin-form input[type="email"],
+#signin-form input[type="password"] {
+    width: 100%; /* Set input width to 100% */
+    padding: 10px; /* Add padding inside inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin-bottom: 15px; /* Add spacing below inputs */
+}
+
+/* Style for the submit button */
+#signin-form button[type="submit"] {
+    width: 100%; /* Make button full width */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+#signin-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the sign-in form */
+#signup-form {
+    width: 25vw; /* Set maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 0px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+/* Style for form labels */
+#signup-form label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 10px; /* Add spacing below each label */
+    color: white;
+}
+
+/* Style for form inputs */
+#signup-form input[type="email"],
+#signup-form input[type="password"],
+#signup-form input[type="tel"],
+#signup-form input[type="text"]{
+    width: 100%; /* Set input width to 100% */
+    padding: 10px; /* Add padding inside inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin-bottom: 10px; /* Add spacing below inputs */
+}
+
+/* Style for the submit button */
+#signup-form button[type="submit"], 
+#signup-form button[type="button"]{
+    width: 100%; /* Make button full width */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Hover effect for the submit button */
+#signup-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.category-section {
+    margin-left: 0px;
+}
+
+.category-title {
+    color: white;
+    font-weight: 100;
+    margin: 0; /* Remove default margin */
+}
+
+.me-too-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ef6378;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: auto; /* Align button to the right */
+}
+.scammer-details p {
+    color: white;
+    font-weight: 100;
+    margin-right: auto; 
+    margin-left: 15px;
+    margin-top: 3px;
+    line-height: .3;
+}
+

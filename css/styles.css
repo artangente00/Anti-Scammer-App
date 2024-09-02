@@ -1,0 +1,37 @@
+/* styles.css */
+
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    min-width: 100px;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.form-group input {
+    flex: 1; /* Take up remaining space */
+    padding: 8px;
+    margin: 5px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    width: 80%;
+}
+
+#phone {
+    width: 100%; /* Set input width to 100% of its container */
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}

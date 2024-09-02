@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#sidebar {
+    width: 20vw;
+    height: 100vh;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* Sidebar Button Styles */
+#sidebar button {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 15px;
+}
+
+#sidebar button:hover {
+    background-color: #777;
+}
+#content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 70%;
+
+}
+/* Content Section Styles */
+#content > div {
+    margin-bottom: 20px;
+}
+
+#content h1 {
+    color: #333;
+}
+
+h2 {
+    margin-top: 0;
+}
+canvas {
+    width: 100%;
+    height: 300px;
+    display: none; /* Hide the chart initially */
+}
+button {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+}
+select {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+/* Form Styles */
+.input-container {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Style for input fields */
+.input-container input,
+.input-container select,
+.input-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for Scammer Facebook Link input */
+#scammerFbLink,
+#scammerPhoneNumber {
+    width: calc(40% - 5px); /* Set width to 40% minus spacing */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-block; /* Display inputs inline */
+    vertical-align: top; /* Align inputs vertically at the top */
+    margin-right: 5px; /* Add right margin between inputs */
+}
+#scammerEmail, #scammerBankInfoButton {
+    width: calc(40% - 5px);  /* Set the width to fill the container */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+/* Style for inline buttons */
+#postsContent button {
+    display: inline-block;
+    width: calc(40% - 5px); /* Set width to 40% minus margin */
+    margin-right: 5px; /* Add right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+}
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    overflow: auto;
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 50%;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.popup-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+.popup-content button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup-content button:hover {
+    background-color: #aaa;
+}
+#descriptionInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#termsandConditions {
+    font-size: 12px;
+}
+
+/* Container style for the form */
+#postsContent {
+    display: block;
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style for form heading */
+#postsContent h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for buttons */
+.input-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Style for checkbox and label */
+.input-container input[type="checkbox"] {
+    margin-right: 10px;
+    width: fit-content;
+}
+
+/* Style for links within labels */
+.input-container label a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.userProfileTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+strong {
+    font-weight: normal;
+}
+
+#userBar {
+   
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoutButton {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutButton:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#statsTable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust this based on desired spacing */
+    align-items: flex-start; /* Adjust alignment as needed */
+}
+
+.chart-container {
+    flex: 0 0 30%; /* Adjust width of each chart container */
+    margin-bottom: 20px; /* Adjust margin between chart containers */
+}
+/* Style for the tagPostModal */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 999; /* Ensure modal stays on top */
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if needed */
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center modal vertically and horizontally */
+    padding: 25px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 60%; /* Set modal width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the search input */
+#postSearchInput {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for the search results */
+#searchResults ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#searchResults li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#searchResults li:hover {
+    background-color: #ddd;
+}
+
+/* Style for the "Tag Post" button inside search results */
+.tagButton {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 15%;
+}
+
+.tagButton:hover {
+    background-color: #0056b3;
+}
+
+/* CSS for draggable modal */
+.draggable {
+    cursor: move; /* Set cursor to move when hovering over draggable area */
+}
+      /* Style for comment input and button */
+      .comment-input {
+        width: 70%; /* Adjust width as needed */
+        height: 50px; /* Adjust width as needed */
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+
+    .comment-button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 15%;
+    }
+
+    .comment-button:hover {
+        background-color: #0056b3;
+    }
+
+    .comment-form {
+        display: none; /* Initially hide the comment form */
+    }
