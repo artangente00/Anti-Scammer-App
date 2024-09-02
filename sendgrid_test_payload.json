@@ -1,0 +1,22 @@
+{
+    "personalizations": [
+      {
+        "to": [
+          {
+            "email": "artangente00@gmail.com"
+          }
+        ],
+        "subject": "Test Email from curl"
+      }
+    ],
+    "from": {
+      "email": "marketing@pageantcentral.co"
+    },
+    "content": [
+      {
+        "type": "text/plain",
+        "value": "This is a test email sent using curl."
+      }
+    ]
+  }
+  
